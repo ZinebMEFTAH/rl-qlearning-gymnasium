@@ -1,22 +1,42 @@
-# Reinforcement Learning: Q-Learning with Gymnasium
+# Reinforcement Learning — Q-Learning with Gymnasium
 
-Implementation of the Q-Learning algorithm from scratch to train autonomous agents in various simulated environments.
+A from-scratch implementation of the **Q-Learning** algorithm, trained on several classic **Gymnasium** environments. The project covers the full loop: training agents, saving learned policies, and replaying them.
 
 ## Environments
-- **Frozen Lake (4x4 & 8x8)**: Pathfinding on a slippery grid while avoiding holes.
-- **Taxi-v3**: Optimizing pickup and drop-off logic for a virtual taxi.
-- **Cart Pole**: Balancing a pole on a cart using state discretization.
 
-## Algorithm
-- **Q-Learning**: Off-policy temporal difference control.
-- **Exploration vs. Exploitation**: Implemented via an epsilon-greedy strategy.
-- **State Handling**: Continuous state space discretization for the Cart Pole environment.
+- **Frozen Lake (4×4 & 8×8)** — pathfinding on a slippery grid while avoiding holes
+- **Taxi-v3** — learning optimal pickup and drop-off logic
+- **Cart Pole** — balancing a pole using continuous-state discretization
+
+## Method
+
+- **Q-Learning** — off-policy temporal-difference control
+- **Exploration vs. exploitation** — ε-greedy strategy with decay
+- **Continuous states** — discretization for Cart Pole
 
 ## Tech Stack
-- Python, Gymnasium, Numpy, Pickle.
+
+- Python, Gymnasium, NumPy, Pickle (policy persistence)
 
 ## Usage
-To train the agent:
-`python train.py --env FrozenLake-v1`
-To watch the trained agent:
-`python play.py --env FrozenLake-v1 -i`
+
+```bash
+# Train an agent
+python trainAI.py
+
+# Watch a trained agent play
+python play.py
+```
+
+Trained-agent previews for each environment are included as images (`agent-*.png`).
+
+## Project Structure
+
+- `trainAI.py` — training loop
+- `agent.py` — Q-Learning agent
+- `play.py` — load and visualize a trained policy
+- `agent-*.png` — sample results per environment
+
+## Notes
+
+Built to understand reinforcement learning fundamentals by implementing Q-Learning by hand rather than relying on a library.
